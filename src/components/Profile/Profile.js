@@ -1,39 +1,59 @@
 import React from 'react';
 import T from 'prop-types';
+import user from '../../user.js';
+import styles from './Profile.module.css';
 
-
-function User({ avatar, name, tag, location, stats }) {
+ const Profile = ({user}) => {
     return (
-        <div class="description">
-      <img
-        src={avatar}
+        <div className={styles.description} >
+        <img
+        src={user.avatar}
         alt="user avatar"
         className="avatar"
         />
-        <p class="name">{name}</p>
-        <p class="tag">@{tag}</p>
-        <p class="location">{location}</p>
-        <ul>
-            {stats.map(item => (
-            <li key={item.label}>{item.quantity}</li>
-            ))}
-        </ul>
+        <p className="name">{user.name}</p>
+        <p className="tag">@{user.tag}</p>
+        <p className="location">{user.location}</p>
+
+      <ul className="stats">
+          <li>
+            <span className={styles.label}>Followers</span>
+            <span className={styles.quantity}>{user.stats.followers}</span>
+        </li>
+        <li>
+            <span className={styles.label}>Views</span>
+            <span className={styles.quantity}>{user.stats.views}</span>
+      </li>
+      <li>
+            <span className={styles.label}>Likes</span>
+            <span className={styles.quantity}>{user.stats.likes}</span>
+      </li>
+    </ul>
     </div>
-    );
+    )
   }
 
-
-User.propTypes = {
+  Profile.propTypes = {
   avatar: T.string.isRequired,
   alt: T.string,
   tag: T.string.isRequired,
   location: T.string.isRequired,
-  stats: T.arrayOf(
+  stats: 
     T.shape({
     followers: T.number.isRequired,
     views: T.number.isRequired,
     likes: T.number.isRequired,
-    }).isRequired,
-)};
+    }.isRequired,
+  ).isRequired,
+}
 
-export default User;
+
+const ProfileUser = () => {
+  return (
+    <div className={styles.profile}>
+      <Profile user={user} />
+    </div>
+  );
+};
+
+export default ProfileUser;

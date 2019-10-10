@@ -1,5 +1,4 @@
-
-{
+export default {
     "name": "Jacques Gluke",
     "tag": "jgluke",
     "location": "Ocho Rios, Jamaica",

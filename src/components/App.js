@@ -1,12 +1,13 @@
 import React from 'react';
-import Profile from './Profile/Profile.js';
+import ProfileUser from './Profile/Profile.js';
+import StatsUser from './Stats/Stats.js';
 
-const App = () => (
-<div>
-    <Profile>
-
-    </Profile>
-</div>
-)
+function App() {
+    return (
+    <>
+    <ProfileUser />
+    <StatsUser />
+    </>
+    )}
 
 export default App;
