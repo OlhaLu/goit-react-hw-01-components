@@ -1,5 +1,32 @@
+.container {
+  background-color: rgb(230, 224, 224);
+}
+
 .section {
-    margin: 15;
-    text-align: center;
-    background-color: yellow;
+  width: 400px;
+  background-color: rgb(255, 255, 255);
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.title {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: grey;
+  font-weight: bold;
+}
+
+.statList {
+  margin: 0 auto;
+  display: flex;
+  color: cornsilk;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 18px;
+  padding: 15px;
 }
