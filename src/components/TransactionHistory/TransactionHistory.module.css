@@ -1,6 +1,15 @@
 .section {
-    display: block;
-    text-align: center;
-    font-size: 16;
-    background-color: lightsalmon;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: cadetblue;
+  color: cornsilk;
+}
+
+.table {
+  background-color: rgb(197, 197, 199);
+  color: rgb(114, 114, 114);
+  text-align: center;
 }

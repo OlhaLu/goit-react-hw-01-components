@@ -1,5 +1,35 @@
 .section {
-    text-align: center;
-    font-size: 16;
-    background-color: aquamarine;
+  background-color: rgb(230, 224, 224);
+  display: flex;
+  flex-direction: column;
+}
+
+.friendsList {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  padding-right: 20px;
+}
+
+.online {
+  background: darkgreen;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.offline {
+  background: darkred;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 20px;
 }

@@ -6,16 +6,16 @@ import styles from './TransactionHistory.module.css';
 const Transaction = ({ items }) => {
   return (
     <table className={styles.section}>
-      <thead>
+      <thead className={styles.header}>
         <tr>
           <th>Type</th>
           <th>Amount</th>
           <th>Currency</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody className={styles.table}>
         {items.map(el => (
-          <tr>
+          <tr className={styles.tableElement}>
             <td>{el.type}</td>
             <td>{el.amount}</td>
             <td>{el.currency}</td>
