@@ -1,6 +1,5 @@
 import React from 'react';
 import T from 'prop-types';
-import stats from '../../statsArray.js';
 import styles from './Stats.module.css';
 
 const getRandomColor = () => {
@@ -12,11 +11,11 @@ const getRandomColor = () => {
   return color;
 };
 
-const Stats = ({ title, stats }) => {
+const StatsUser = ({ title, stats }) => {
   return (
     <div className={styles.container}>
       <section className={styles.section}>
-        <h2 className={styles.title}>Upload stats</h2>
+        <h2 className={styles.title}>{title}</h2>
 
         <ul className={styles.statList}>
           {stats.map(item => (
@@ -35,7 +34,11 @@ const Stats = ({ title, stats }) => {
   );
 };
 
-Stats.propTypes = {
+StatsUser.defaultProps = {
+  title: '',
+};
+
+StatsUser.propTypes = {
   title: T.string.isRequired,
   stats: T.arrayOf(
     T.shape({
@@ -44,14 +47,6 @@ Stats.propTypes = {
       percentage: T.number.isRequired,
     }),
   ).isRequired,
-};
-
-const StatsUser = () => {
-  return (
-    <div>
-      <Stats stats={stats} />
-    </div>
-  );
 };
 
 export default StatsUser;

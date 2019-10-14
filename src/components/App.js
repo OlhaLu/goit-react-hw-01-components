@@ -4,14 +4,20 @@ import StatsUser from './Stats/Stats.js';
 import FriendsList from './FriendList/FriendList.js';
 import TransactionHistory from './TransactionHistory/TransactionHistory.js';
 
+import user from '../user.json';
+import stats from '../statsArray.json';
+import friends from '../friends.json';
+import transactions from '../transactions.json';
+
 function App() {
-    return (
+  return (
     <>
-    <ProfileUser />
-    <StatsUser />
-    <FriendsList/>
-    <TransactionHistory/>
+      <ProfileUser user={user} />
+      <StatsUser title="Upload stats" stats={stats} />
+      <FriendsList friends={friends} />
+      <TransactionHistory items={transactions} />
     </>
-    )}
+  );
+}
 
 export default App;
